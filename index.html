@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/x-icon" href="src/img/amazon-music-icon.svg">
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body class="flex h-lvh justify-center items-center align-middle font-inter bg-no-repeat bg-cover duration-1000">
+        <main class="flex justify-between w-[898px] h-[500px] px-4 rounded-2xl bg-linear-to-b from-black to-neutral-600 text-white/80">
+            <div id="player" class="w-[698px] flex flex-wrap">
+                <nav class="h-100px w-full flex justify-between items-center">
+                    <img class="w-[50px]" src="src/img/amazon-music-icon.svg" alt="">
+                </nav>
+                <audio id="audioTag" preload="metadata">
+                </audio>
+                <div id="metaData" class="h-[150px] flex px-11 mt-5">
+                    <img id="trackCover" class="h-[150px] w-[150px] rounded-2xl" src="" alt="">
+                    <div class="flex flex-wrap justify-between ml-5 w-[400px]">
+                        <h1 id="trackTitle" class="flex items-center w-full uppercase text-[30px] whitespace-nowrap overflow-hidden font-extrabold"></h1>
+                        <h2 id="trackAlbum" class="flex items-center w-full uppercase text-[15px] font-semibold text-white/60"></h2>
+                        <h3 id="trackSinger" class="flex items-center w-full text-[20px] font-bold text-white/60"></h3>
+                    </div>
+                </div>
+                <div id="timeline" class="w-full flex justify-center items-center h-[50px] px-11 mt-10">
+                    <div class="w-[400px] flex flex-wrap justify-between">
+                        <h6 id="passedTime" class="text-[9px]"></h6>
+                        <h6 id="totalTime" class="text-[9px]"></h6>
+                        <input id="seekBar" type="range" class="range w-full cursor-pointer appearance-none bg-[#B1B1B1] h-1">        
+                    </div>
+                </div>
+                <div class="w-full flex flex-wrap justify-center px-11">
+                    <div id="controls" class="flex items-center justify-between px-11 w-[300px] mx-[100px]">
+                        <img id="nextButton" class="w-10 cursor-pointer" onclick="previousTrack()" src="src/img/skip_previous_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                        <img id="playPauseButton" class="w-12 cursor-pointer" src="src/img/play_arrow_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                        <img id="previousButton" class="w-10 cursor-pointer" onclick="nextTrack()" src="src/img/skip_next_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>   
+                    <div id="options" class="w-[200px] flex items-center justify-between px-11 pt-3">
+                        <img id="shuffleButton" class="w-5 cursor-pointer" onclick="shufflePlay()" src="src/img/shuffle_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                        <img id="repeatButton" class="w-5 cursor-pointer" onclick="repeatTrack()" src="src/img/repeat_one_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                    <div id="settings" class="w-full flex justify-between items-center align-middle rder h-[50px]">
+                        <div class="flex items-center">
+                            <img id="muteButton" class="cursor-pointer" src="src/img/volume_up_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                            <input id="volumeRange" type="range" min="0" max="100" value="80" class="range cursor-pointer appearance-none bg-[#B1B1B1] h-1 ml-1">
+                        </div>
+                        <img id="playIcon" src="src/img/equalizer_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                </div>
+                <div class="w-full flex justify-between items-center h-[50px]">
+                    <h2 class="font-myFont3">Developed by Hamed Moradi</h2>
+                    <div class="flex justify-between w-[100px]">
+                        <a class="" href="https://www.linkedin.com/in/haamedmoradiidev/"><img class="" src="src/img/linkedin.svg" alt=""></a>
+                        <a class="" href="https://github.com/hamedmoradidev"><img class="" src="src/img/github.svg" alt=""></a>
+                        <a class="" href="https://instagram.com/hamed.moradi.dev"><img class="" src="src/img/instagram.svg" alt=""></a>    
+                    </div>
+                </div>    
+            </div>
+            <div id="playList" class="w-[140px] flex flex-wrap justify-end overflow-y-scroll items-end py-5 my-3 pr-3 bg-linear-to-l from-white/10 to-transparent">
+            </div>
+        </main>
+    </body>
+    <script src="script.js">
+    </script>
+    </html>
+</body>
+</html>
